@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct ToDoApp: App {
+
+    @State private var tasks: [Task] = Task.tasks
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            List_View(tasks: $tasks)
         }
     }
 }
